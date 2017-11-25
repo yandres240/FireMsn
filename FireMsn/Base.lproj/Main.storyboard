@@ -80,7 +80,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXq-gx-QUY">
                                 <rect key="frame" x="133" y="94" width="108" height="50"/>
@@ -100,18 +100,26 @@
                                     <action selector="btn_login:" destination="5sx-6Q-g2D" eventType="touchUpInside" id="bjb-fj-iKg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R15-m2-wcn">
+                                <rect key="frame" x="0.0" y="585" width="375" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="Cdc-EN-qfm"/>
                     <connections>
+                        <outlet property="lbl_error" destination="R15-m2-wcn" id="xsj-iR-0Pc"/>
                         <outlet property="txt_email" destination="swK-RO-CvK" id="yIr-Df-Ouu"/>
                         <outlet property="txt_password" destination="gnf-7T-PFy" id="4s5-OS-6ke"/>
                         <segue destination="LLm-Ag-8Qh" kind="show" identifier="GoToChat" id="W87-g9-9Yb"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1713" y="-293"/>
+            <point key="canvasLocation" x="1712.8" y="-293.70314842578711"/>
         </scene>
         <!--Register-->
         <scene sceneID="I9q-lh-dMr">
@@ -202,7 +210,11 @@
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="FIre Chat" id="Fja-S8-KJB">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="0gf-eO-JvS"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="0gf-eO-JvS">
+                            <connections>
+                                <action selector="btn_logout:" destination="LLm-Ag-8Qh" id="17e-kT-hRa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dN-qW-WEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,6 +241,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ckM-AP-1tu"/>
+        <segue reference="W87-g9-9Yb"/>
     </inferredMetricsTieBreakers>
 </document>

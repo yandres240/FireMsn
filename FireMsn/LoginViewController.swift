@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var lbl_error: UILabel!
     @IBOutlet weak var txt_password: UITextField!
     @IBOutlet weak var txt_email: UITextField!
     @IBAction func btn_login(_ sender: UIButton) {
+        Auth.auth().signIn(withEmail: txt_email.text!, password: txt_password.text!) {(user,error) in
+            if error != nil{
+                print(error!)
+                self.lbl_error.text = error!.localizedDescription
+            }
+            else{
+                print("Login")
+                self.lbl_error.text = "Login"
+                self.performSegue(withIdentifier: "GoToChat", sender: self)
+            }
+        }
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
