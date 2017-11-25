@@ -14,6 +14,9 @@
 		8D0C2ABE1FC65CB4003141CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D0C2ABD1FC65CB4003141CB /* Assets.xcassets */; };
 		8D0C2AC11FC65CB4003141CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D0C2ABF1FC65CB4003141CB /* LaunchScreen.storyboard */; };
 		8D0C2AC91FC65D60003141CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D0C2AC81FC65D60003141CB /* GoogleService-Info.plist */; };
+		8DD0CE171FC9F4CB00AED445 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0CE161FC9F4CB00AED445 /* LoginViewController.swift */; };
+		8DD0CE191FC9F4DE00AED445 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0CE181FC9F4DE00AED445 /* RegisterViewController.swift */; };
+		8DD0CE1B1FC9F4EF00AED445 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD0CE1A1FC9F4EF00AED445 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		8D0C2AC01FC65CB4003141CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D0C2AC21FC65CB4003141CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D0C2AC81FC65D60003141CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8DD0CE161FC9F4CB00AED445 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8DD0CE181FC9F4DE00AED445 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8DD0CE1A1FC9F4EF00AED445 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		97BEF00D9FE639C5AA7174B0 /* Pods_FireMsn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireMsn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FEC5AF549FFE46C0CE353F3 /* Pods-FireMsn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireMsn.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireMsn/Pods-FireMsn.release.xcconfig"; sourceTree = "<group>"; };
 		BA12FA5B7F863482C88D12B7 /* Pods-FireMsn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireMsn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireMsn/Pods-FireMsn.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +85,9 @@
 				8D0C2ABD1FC65CB4003141CB /* Assets.xcassets */,
 				8D0C2ABF1FC65CB4003141CB /* LaunchScreen.storyboard */,
 				8D0C2AC21FC65CB4003141CB /* Info.plist */,
+				8DD0CE161FC9F4CB00AED445 /* LoginViewController.swift */,
+				8DD0CE181FC9F4DE00AED445 /* RegisterViewController.swift */,
+				8DD0CE1A1FC9F4EF00AED445 /* ChatViewController.swift */,
 			);
 			path = FireMsn;
 			sourceTree = "<group>";
@@ -228,8 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD0CE171FC9F4CB00AED445 /* LoginViewController.swift in Sources */,
 				8D0C2AB91FC65CB4003141CB /* ViewController.swift in Sources */,
 				8D0C2AB71FC65CB4003141CB /* AppDelegate.swift in Sources */,
+				8DD0CE1B1FC9F4EF00AED445 /* ChatViewController.swift in Sources */,
+				8DD0CE191FC9F4DE00AED445 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +405,7 @@
 				8D0C2AC71FC65CB4003141CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         //Test
-        let myDatabase = Database.database().reference()
-        myDatabase.setValue("Sirvio")
+        //let myDatabase = Database.database().reference()
+        //myDatabase.setValue("Sirvio")
         // Override point for customization after application launch.
         return true
     }

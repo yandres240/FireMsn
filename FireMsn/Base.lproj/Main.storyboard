@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6FG-pt-Gdt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FireMsn" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,17 +46,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="96Q-ma-7iz"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="96Q-ma-7iz"/>
+                    <connections>
+                        <segue destination="LLm-Ag-8Qh" kind="show" identifier="GoToChat" id="K1q-9a-9nk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183.2" y="118.29085457271366"/>
+            <point key="canvasLocation" x="929" y="118"/>
         </scene>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="c18-6L-zd4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9zk-7t-FvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="5sx-6Q-g2D" sceneMemberID="viewController">
+                <viewController id="5sx-6Q-g2D" customClass="LoginViewController" customModule="FireMsn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7eF-2s-lZp"/>
                         <viewControllerLayoutGuide type="bottom" id="JoS-jN-63N"/>
@@ -94,20 +97,26 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LLm-Ag-8Qh" kind="show" id="hBq-MH-oJW"/>
+                                    <action selector="btn_login:" destination="5sx-6Q-g2D" eventType="touchUpInside" id="bjb-fj-iKg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Login" id="Cdc-EN-qfm"/>
+                    <connections>
+                        <outlet property="txt_email" destination="swK-RO-CvK" id="yIr-Df-Ouu"/>
+                        <outlet property="txt_password" destination="gnf-7T-PFy" id="4s5-OS-6ke"/>
+                        <segue destination="LLm-Ag-8Qh" kind="show" identifier="GoToChat" id="W87-g9-9Yb"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1812" y="117.39130434782609"/>
+            <point key="canvasLocation" x="1713" y="-293"/>
         </scene>
-        <!--View Controller-->
+        <!--Register-->
         <scene sceneID="I9q-lh-dMr">
             <objects>
-                <viewController id="c7y-8X-Qbf" sceneMemberID="viewController">
+                <viewController id="c7y-8X-Qbf" customClass="RegisterViewController" customModule="FireMsn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ahO-cY-kp0"/>
                         <viewControllerLayoutGuide type="bottom" id="0Lb-zn-uGl"/>
@@ -117,22 +126,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PG-KM-Y8H">
-                                <rect key="frame" x="84" y="471" width="198" height="46"/>
+                                <rect key="frame" x="86" y="387" width="198" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LLm-Ag-8Qh" kind="show" id="0AB-Sc-BrH"/>
+                                    <action selector="btn_register:" destination="c7y-8X-Qbf" eventType="touchUpInside" id="3kl-Cn-Kx7"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBc-EK-rwJ">
-                                <rect key="frame" x="91" y="318" width="193" height="30"/>
+                                <rect key="frame" x="91" y="274" width="193" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hed-mI-LJP">
                                 <rect key="frame" x="105" y="100" width="165" height="54"/>
@@ -142,24 +151,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbK-TX-jXo">
-                                <rect key="frame" x="89" y="223" width="193" height="30"/>
+                                <rect key="frame" x="91" y="184" width="193" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFl-4A-itp">
+                                <rect key="frame" x="0.0" y="586" width="375" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Register" id="u8C-gL-5QE"/>
+                    <connections>
+                        <outlet property="lbl_error" destination="kFl-4A-itp" id="BFI-LE-lKK"/>
+                        <outlet property="txt_email" destination="gbK-TX-jXo" id="Ovv-pT-EzH"/>
+                        <outlet property="txt_password" destination="wBc-EK-rwJ" id="Opp-bi-SRM"/>
+                        <segue destination="LLm-Ag-8Qh" kind="show" identifier="GoToChat" id="ckM-AP-1tu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jv6-o3-QZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2436" y="116.49175412293854"/>
+            <point key="canvasLocation" x="1712.8" y="427.73613193403304"/>
         </scene>
-        <!--View Controller-->
+        <!--FIre Chat-->
         <scene sceneID="gZM-HK-FTI">
             <objects>
-                <viewController id="LLm-Ag-8Qh" sceneMemberID="viewController">
+                <viewController id="LLm-Ag-8Qh" customClass="ChatViewController" customModule="FireMsn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TV8-hg-Uf3"/>
                         <viewControllerLayoutGuide type="bottom" id="S6X-S1-A4A"/>
@@ -178,10 +201,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="FIre Chat" id="Fja-S8-KJB">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="0gf-eO-JvS"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dN-qW-WEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3068" y="116.49175412293854"/>
+            <point key="canvasLocation" x="2698" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kfJ-M1-Fu3">
@@ -203,6 +229,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0AB-Sc-BrH"/>
+        <segue reference="ckM-AP-1tu"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.swift
+//  LoginViewController.swift
 //  FireMsn
 //
 //  Created by practica on 25/11/17.
@@ -7,25 +7,12 @@
 //
 
 import UIKit
-import Firebase
 
-class RegisterViewController: UIViewController {
+class LoginViewController: UIViewController {
 
-    @IBOutlet weak var lbl_error: UILabel!
-    @IBOutlet weak var txt_email: UITextField!
     @IBOutlet weak var txt_password: UITextField!
-    @IBAction func btn_register(_ sender: UIButton) {
-        Auth.auth().createUser(withEmail: txt_email.text!, password: txt_password.text!) {(user,error) in
-            if error != nil{
-                print(error!)
-                self.lbl_error.text = error!.localizedDescription
-            }
-            else{
-                print("Registered")
-                self.lbl_error.text = "Registered"
-                self.performSegue(withIdentifier: "GoToChat", sender: self)
-            }
-        }
+    @IBOutlet weak var txt_email: UITextField!
+    @IBAction func btn_login(_ sender: UIButton) {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
