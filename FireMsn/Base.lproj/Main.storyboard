@@ -58,7 +58,6 @@
         <!--Login-->
         <scene sceneID="c18-6L-zd4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9zk-7t-FvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="5sx-6Q-g2D" customClass="LoginViewController" customModule="FireMsn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7eF-2s-lZp"/>
@@ -118,6 +117,7 @@
                         <segue destination="LLm-Ag-8Qh" kind="show" identifier="GoToChat" id="W87-g9-9Yb"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zk-7t-FvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1712.8" y="-293.70314842578711"/>
         </scene>
@@ -236,6 +236,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table_View" destination="Fki-uu-ZNL" id="JGh-hC-D2B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dN-qW-WEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
